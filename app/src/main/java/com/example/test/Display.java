@@ -61,12 +61,12 @@ public class Display extends AppCompatActivity
             @Override
             public void onResponse(Call<AlbumResponse> call, Response<AlbumResponse> response)
             {
-                Log.d(Tag,"coucou !");
+ 
                 List<Album> albums = response.body().getResults();
                 Log.d(Tag, response.body().getResults().toString());
 
                 recyclerView.setAdapter(new AlbumAdapter(albums, R.layout.list_item_album, getApplicationContext()));
-                Log.d(Tag, "Number of movies received: " + albums.size());
+   
             }
 
             @Override
